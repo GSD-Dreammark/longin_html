@@ -17,9 +17,14 @@ NEWSPIDER_MODULE = 'crawl_login.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'crawl_login (+http://www.yourdomain.com)'
-
+# 开启cookie中间键
+DOWNLOADER_MIDDLEWARES  =  {
+    'scrapy.downloadermiddlewares.cookies.CookiesMiddleware':543,
+}
+COOKIES_ENABLED=True
+COOKIES_DEBUG=True
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 # 同时使用图片和文件管道
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
